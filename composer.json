@@ -1,0 +1,21 @@
+{
+  "version": "0.3",
+  "name": "omnitools/core",
+  "description": "xxxxx",
+  "type": "omnitools-extension",
+  "authors": [
+    {
+      "name": "pixelfabrik",
+      "homepage": "https://www.pixel-fabrik.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "twig/twig": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "OmniTools\\Core\\": "/src/"
+    }
+  }
+}
