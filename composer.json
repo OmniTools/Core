@@ -1,6 +1,6 @@
 {
   "name": "omnitools/core",
-  "description": "xxxxx",
+  "description": "OmniTools Core Extension",
   "type": "omnitools-extension",
   "authors": [
     {
@@ -8,6 +8,7 @@
       "homepage": "https://www.pixel-fabrik.com"
     }
   ],
+  "license": "UNLICENSED",
   "require": {
     "php": "^7.2",
     "twig/twig": "^3.0",
