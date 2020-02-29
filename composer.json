@@ -10,11 +10,21 @@
   ],
   "require": {
     "php": "^7.2",
-    "twig/twig": "^3.0"
+    "twig/twig": "^3.0",
+    "symfony/twig-bridge": "^5.0",
+    "php-di/php-di": "^6.0",
+    "doctrine/orm": "^2.7",
+    "doctrine/migrations": "^2.2",
+    "swiftmailer/swiftmailer":"^6.0",
+    "symfony/translation": "^5.0"
+  },
+  "require-dev": {
+    "frootbox/debug": "*"
   },
   "autoload": {
     "psr-4": {
-      "OmniTools\\Core\\": "/src/"
+      "OmniTools\\Core\\": "/src/",
+      "OmniTools\\": "/classes/"
     }
   }
 }

@@ -1,0 +1,22 @@
+{{ front.config({
+    'layout': 'Prompt'
+}) }}
+
+
+
+<form method="post" class="ajax" action="{{ controller.getActionUri('ajaxSubmit') }}">
+    <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="E-Mail">
+        <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+    </div>
+    <div class="form-group">
+        <label for="password">Passwort</label>
+        <input required type="password" class="form-control" name="password" id="password" placeholder="Password">
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">angemeldet bleiben</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Anmelden</button>
+</form>
