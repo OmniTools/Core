@@ -8,7 +8,7 @@
       "homepage": "https://www.pixel-fabrik.com"
     }
   ],
-  "license": "UNLICENSED",
+  "license": "proprietary",
   "require": {
     "php": "^7.2",
     "twig/twig": "^3.0",
@@ -26,5 +26,11 @@
     "psr-4": {
       "OmniTools\\Core\\": "/src/"
     }
+  },
+  "scripts": {
+    "post-update-cmd": "OmniTools\\Core\\Setup\\Installer::postUpdate",
+    "post-install-cmd": [
+      "OmniTools\\Core\\Setup\\Installer::postInstall"
+    ]
   }
 }
