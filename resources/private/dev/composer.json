@@ -1,0 +1,25 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../extensions/addresses"
+        },
+        {
+            "type": "path",
+            "url": "../extensions/core"
+        },
+        {
+            "type": "path",
+            "url": "../extensions/apartments-rental"
+        }
+    ],
+    "require": {
+        "omnitools/core": "dev-master",
+        "omnitools/apartments-rental": "dev-master",
+        "omnitools/addresses": "dev-master"
+    },
+    "require-dev": {
+        "frootbox/debug": "*"
+    },
+    "minimum-stability": "stable"
+}

@@ -16,7 +16,7 @@ class View
      */
     public function __construct()
     {
-        $this->loader = new \Twig\Loader\FilesystemLoader(CORE_DIR . 'app/resources/private/views/');
+        $this->loader = new \Twig\Loader\FilesystemLoader(CORE_DIR . 'app/vendor/omnitools/template/resources/private/views/');
         $this->twig = new \Twig\Environment($this->loader, [
          //   'cache' => CORE_DIR . 'files/cache/view/',
         ]);

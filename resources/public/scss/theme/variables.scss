@@ -1,0 +1,14 @@
+$color-spot1: #FF7800;
+$color-spot2: #02B7E0;
+
+$color-background: #f2f3f8;
+$color-background-dark: #635C55;
+
+$color-success: #6aa728;
+$color-danger: #dc3545;
+
+$box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+
+@mixin condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}

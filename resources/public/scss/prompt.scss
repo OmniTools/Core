@@ -1,0 +1,17 @@
+body.prompt {
+
+  .pillow {
+    margin-top: 100px;
+    padding: 15px;
+
+    background: #63758a;
+
+    color: #FFF;
+
+    form {
+      .text-muted {
+        color: rgba(255, 255, 255, .4) !important;
+      }
+    }
+  }
+}

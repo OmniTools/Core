@@ -1,0 +1,145 @@
+.btn.btn-primary {
+  background: $color-spot1;
+  border-color: $color-spot1;
+}
+
+.btn.btn-success {
+  background: $color-success;
+  border-color: $color-success;
+}
+
+svg.icon {
+  margin-right: 6px;
+}
+
+table.table {
+  margin: 20px 0;
+
+  background: #FFF;
+  box-shadow: $box-shadow;
+
+  &.noshadow {
+    box-shadow: none;
+  }
+
+  tr.highlighted {
+
+    td {
+      background: $color-spot1;
+      color: #FFF;
+    }
+  }
+
+  tr[data-href] {
+    cursor: pointer;
+  }
+}
+
+a {
+  color: $color-spot2;
+}
+
+a:hover {
+  transition: .5s;
+  text-decoration: none;
+}
+
+h2 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}
+
+h4 {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.portlet {
+  margin-bottom: 20px;
+  background: #FFF;
+  box-shadow: $box-shadow;
+}
+
+.portlet .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 2px solid #CCC;
+}
+
+.portlet .head h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.portlet .head .label {
+  display: flex;
+}
+
+.portlet .head .toolbar {
+  display: flex;
+  align-content: flex-end;
+}
+
+.portlet .head .toolbar a {
+
+  padding: 5px 0 5px 10px;
+
+  &.button {
+    padding: 5px 1rem;
+    background: rgba(0,0,0,.05);
+    border-radius: 4px;
+  }
+
+  &.icon {
+    color: #CCC;
+  }
+}
+
+.portlet .head .toolbar a.success {
+  color: #6aa728;
+}
+
+.portlet .head .toolbar a.danger {
+  color: red;
+}
+
+.portlet {
+
+  .body {
+    padding: 15px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  table.table {
+    margin-top: 0;
+
+    thead {
+      th {
+        border-top: none;
+      }
+    }
+  }
+}
+
+.modal {
+
+  .modal-content {
+
+    .nav.nav-tabs {
+
+      .nav-item:first-of-type {
+        margin-left: 15px;
+      }
+    }
+
+    table.table {
+      margin: 0;
+    }
+  }
+}
