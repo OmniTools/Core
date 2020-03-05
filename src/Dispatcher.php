@@ -104,7 +104,8 @@ class Dispatcher
         $translator = new \Symfony\Component\Translation\Translator('de_DE');
         $translator->addLoader('file', new \Symfony\Component\Translation\Loader\PhpFileLoader());
         $translator->addResource('file', CORE_DIR . 'app/vendor/omnitools/core/resources/private/language/de_DE.php', 'de_DE');
-
+        $translator->addResource('file', CORE_DIR . 'app/vendor/omnitools/addresses/resources/private/language/de_DE.php', 'de_DE');
+        
         $languageFile = $controller->getExtensionPath() . 'resources/private/language/de_DE.php';
 
         if (file_exists($languageFile)) {
