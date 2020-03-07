@@ -49,6 +49,14 @@ abstract class AbstractEntity
     }
 
     /**
+     * 
+     */
+    public function getClassName(): string
+    {
+        return get_class($this);
+    }
+
+    /**
      *
      */
     public function getCreated()
