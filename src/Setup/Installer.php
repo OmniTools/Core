@@ -12,7 +12,7 @@ class Installer
     /**
      *
      */
-    public static function postInstall(Event $event)
+    public static function postUpdate(Event $event)
     {
         $coreDir = dirname($event->getComposer()->getConfig()->get('vendor-dir')) . '/';
         $resDir = realpath(__DIR__ . '/../../resources/private/install') . '/';

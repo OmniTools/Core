@@ -45,19 +45,23 @@ class Dispatcher
         Session $session,
         \OmniTools\Core\Http\Get $get,
         View $view,
+        Config $config,
         View\Front $front
     ): string
     {
+
+        $view->assign('config', $config);
+
         if (dirname($_SERVER['SCRIPT_NAME']) != '/') {
             $request = str_replace(dirname($_SERVER['SCRIPT_NAME']) . '/', '', $_SERVER['REQUEST_URI']);
-            define('SERVER_PATH', '//' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['SCRIPT_NAME']) . '/');
+            define('SERVER_PATH', '//' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']) . '/');
         }
         else {
             $request = $_SERVER['REQUEST_URI'];
-            define('SERVER_PATH', '//' . $_SERVER['SERVER_NAME'] . '/');
+            define('SERVER_PATH', '//' . $_SERVER['HTTP_HOST'] . '/');
         }
 
-        if ($request[0] == '/') {
+        if (!empty($request) and $request[0] == '/') {
             $request = substr($request, 1);
         }
 
