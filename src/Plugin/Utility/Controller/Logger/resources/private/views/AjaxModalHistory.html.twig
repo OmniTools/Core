@@ -1,0 +1,20 @@
+{% if history | length == 0 %}
+    <div class="modal-body">
+        <div class="message warning">Für dieses Element sind keine Verlaufsdaten gespeichert.</div>
+    </div>
+{% else %}
+
+    <table class="table">
+        <tbody>
+
+        {% for log in history %}
+            <tr>
+                <td>{{ log.getCreated().format('d.m.Y H:i') }} Uhr</td>
+                <td>{{ log.getAction() | trans(log.getContextTranslatable()) | raw }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endif %}
