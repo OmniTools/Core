@@ -106,6 +106,29 @@ class Dispatcher
                 $apiController->setPayloadRaw($payloadRaw);
             }
 
+
+/*
+            $translator = new \Symfony\Component\Translation\Translator('de_DE');
+            $translator->addLoader('file', new \Symfony\Component\Translation\Loader\PhpFileLoader());
+            $translator->addResource('file', CORE_DIR . 'app/vendor/omnitools/core/resources/private/language/de_DE.php', 'de_DE');
+            $translator->addResource('file', CORE_DIR . 'app/vendor/omnitools/addresses/resources/private/language/de_DE.php', 'de_DE');
+
+            // $languageFile = $controller->getExtensionPath() . 'resources/private/language/de_DE.php';
+
+            if (file_exists($languageFile)) {
+                $translator->addResource('file', $languageFile, 'de_DE');
+            }
+
+            $languageFile = $controller->getPath() . 'resources/private/language/de_DE.php';
+
+            if (file_exists($languageFile)) {
+                $translator->addResource('file', $languageFile, 'de_DE');
+            }
+
+            $view->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($translator));
+*/
+
+
             // Compose controller action
             $action = $action . 'ActionUsing' . ucfirst(strtolower($_SERVER['REQUEST_METHOD']));
 
