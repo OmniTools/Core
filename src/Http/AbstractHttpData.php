@@ -20,6 +20,14 @@ abstract class AbstractHttpData
     /**
      *
      */
+    public function getData(): array
+    {
+        return $this->data;
+    }
+
+    /**
+     *
+     */
     public function require(array $requirements): void
     {
         foreach ($requirements as $key => $attribute) {
