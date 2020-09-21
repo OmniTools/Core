@@ -140,8 +140,16 @@ class Dispatcher
         }
         catch ( \OmniTools\Core\Exception\InvalidContext $e ) {
 
-            d($controllerAction);
-            d($e->getMessage());
+            if ($controllerAction != 'index') {
+
+                $url = $controller->getActionUri('index');
+                $url = dirname($_SERVER['SCRIPT_NAME']) != '/' ? dirname($_SERVER['SCRIPT_NAME'])  . '/' . $url : '/' . $url;
+
+                $front->flash($e->getMessage(), 'Error');
+
+                header('Location: ' . $url);
+                exit;
+            }
         }
 
 
