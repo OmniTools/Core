@@ -20,6 +20,18 @@ class View
         $this->twig = new \Twig\Environment($this->loader, [
          //   'cache' => CORE_DIR . 'files/cache/view/',
         ]);
+
+
+        // TODO move to re-usable twig extension later
+        $filter = new \Twig\TwigFilter('truncate', function ($string, $input = 20) {
+
+            if (strlen($string) <= $input) {
+                return $string;
+            }
+
+            return substr($string, 0, $input) . ' ...';
+        });
+        $this->twig->addFilter($filter);
     }
 
     /**
